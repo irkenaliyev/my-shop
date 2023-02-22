@@ -1,0 +1,45 @@
+.cards{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+}
+.card-img img{
+    width:250px;
+    height: 300px;
+}
+.card{
+    width: calc(33.33% - 100px);
+    text-align: center;
+    border: 3px solid grey;
+    position: relative;
+}
+.card-header{
+    opacity: 0.5;
+}
+.card-img{
+    opacity: 0.5;
+}
+.card-desc{
+    opacity: 0.5;
+}
+.card::before{
+    content: 'Нет в наличии';
+    position: absolute;
+    bottom: -30px;
+    right: 33%;
+    color:black;
+}
+#restart{
+    position: absolute;
+    bottom: -90px;
+    width: 200px;
+    height: 50px;
+    font-size: 15px;
+}
+.isInStock.card::before{
+    display: none !important;
+    
+}
+.isInStock.card>*{
+    opacity: 1 !important;
+}
